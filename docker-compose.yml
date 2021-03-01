@@ -1,0 +1,18 @@
+version: '3.2'
+services:
+  sharedpg:
+    container_name: sharedredis
+    image: redis:alpine
+    restart: always
+    ports:
+      - 6380:6379
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    networks:
+    - shared
+networks:
+  shared:
+    name: shared
+    driver: bridge
