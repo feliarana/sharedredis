@@ -26,6 +26,10 @@ services:
     ...
     networks:
       - shared
+
+volumes:
+  sharedredis:
+    external: true
 ```
 
 If you're using Rails, here's an example of how my redis initializer looks like:

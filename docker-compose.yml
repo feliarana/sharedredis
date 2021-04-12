@@ -12,6 +12,9 @@ services:
       - POSTGRES_PASSWORD=postgres
     networks:
     - shared
+volumes:
+  sharedredis:
+    name: sharedredis
 networks:
   shared:
     name: shared
