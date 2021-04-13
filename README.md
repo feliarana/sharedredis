@@ -7,8 +7,16 @@ Requirements:
 
 Steps:
 
-1) Configure port, network, user and password as you wish. Default port is 6380.
-2) `docker-compose up -d`
+1) Configure port, network, user and password as you wish. Default port is 6380:
+
+2) Create a network. For example, we are craeting the network named "shared" using the bridge driver: 
+`docker network create --driver bridge shared`
+
+For more information:
+https://docs.docker.com/network/bridge/
+
+
+3) `docker-compose up -d`
 
 By using the default docker-compose.yml of this proyect, your containers will connect to the 6379 port using the shared network.
 If you want to connect outside docker (e.g, sqlpro or pgAdmin), you can do it by connecting through localhost at port 6380.
