@@ -9,7 +9,7 @@ Steps:
 
 1) Configure port, network, user and password as you wish. Default port is 6380:
 
-2) Create a network. For example, we are craeting the network named "shared" using the bridge driver: 
+Create a bridge network. For example, in order to create a network named "shared", you can run this command: 
 `docker network create --driver bridge shared`
 
 For more information:
